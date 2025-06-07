@@ -1,0 +1,429 @@
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffe0;
+}
+
+.head{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../images/recipebg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.head::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #ffffe0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.editContent{
+    position: fixed;
+    height: auto;
+    width: 90%;
+    max-width: 450px;
+    height: 80vh;
+    border-radius: 10px;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.editContent h2{
+    margin-right: 80%;
+}
+
+.edit1 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;
+    padding: 0;
+    border: none;
+    background: url('../images/edit2.jpg') center/contain no-repeat;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 1;
+}
+
+.edit1:hover {
+    transform: scale(1.1);
+}
+
+.edit1:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+.editTable tr {
+    text-align: left;
+    justify-content: flex-start;
+    align-items: center; 
+    gap: 20px; 
+}
+  
+.editTable label {
+    width: 120px; 
+    text-align: right; 
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.editTable textarea{
+    resize: vertical;
+}
+
+.editTable input, .editTable textarea{
+    border: 2px solid black;
+    border-radius: 10px;
+    flex: 1;
+    width: 100%;
+    padding: 2%;
+    font-size: 0.9rem;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.editTable input[type="file"]{
+    border: none;
+    background: none; 
+    outline: none; 
+    box-shadow: none; 
+    padding: 0; 
+    font-size: 0.9rem;
+}
+
+.editBtn{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.add {
+    background: #f8f8f8;
+    border: 2px dashed #aaa;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+  
+.add:hover {
+    background: #f0f0f0;
+    border-color: #888;
+    transform: translateY(-5px);
+}
+  
+.add-icon {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+.add p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.AddRecipe{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 800px; 
+    height: 80vh;
+    border-radius: 10px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    overflow: auto;
+}
+  
+.AddTable {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.AddTable tr {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+    margin: 2%;
+}
+  
+.AddTable label {
+    font-weight: bold;
+    width: 100px;
+    text-align: right;
+}
+
+.addimg {
+    max-width: 200px;
+    height: auto;
+    border: 2px dashed grey;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.addimg:hover {
+    border-color: #2e7d32;
+    transform: scale(1.02);
+}
+
+.AddTable input, .AddTable textarea, .AddTable select{
+    width: 90%;
+    max-width: 450px;
+    min-width: 100px;
+    margin: 1%;
+    padding: 1%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: 0.3s;
+}
+
+.AddTable textarea{
+    width: 100%;
+    min-width: 100px; 
+    border: 2px solid #ddd; 
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 1%;
+    resize: vertical;
+}
+
+.AddTable input[type="file"]{
+    border: none;
+    background: none; 
+    box-shadow: none; 
+    padding: 0; 
+    font-size: 0.8rem;
+}
+
+.label{
+    margin: 1%;
+    margin-left: -2%;
+    border: 2px solid black;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+    position: relative;
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #fff;
+    width: 400px;
+}
+
+.search{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.searchfield{
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 8px;
+    flex: 1;
+    font-size: 16px;
+}
+
+.back{
+    left: 0;
+    margin-left: 20px;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 20px;
+    padding: 1% 1%;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(118, 114, 114);
+}
+
+.back:hover{
+    color: rgb(175, 92, 219);
+}
+
+a{
+    text-decoration: none;
+}
+
+.recommendation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1rem 0;
+}
+  
+.recipe-wrapper, .add {
+    flex: 1 1 300px;
+    max-width: 400px;
+    min-width: 280px;
+}
+
+.content {
+    position: relative;
+    height: 300px;
+    border-radius: 1rem;
+    background: linear-gradient(to bottom, #fffedc, #fffab5);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border: 1px solid #e8e8c4;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.img {
+    width: 80%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.label1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.label, .label2 {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    gap: 0.3rem;
+}  
+
+.addBtn, .deleteBtn, .btnEdit{
+    margin-left: 1%;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid grey;
+    background-color: #03661a;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 2px rgb(118, 114, 114);
+}
+
+.addBtn:hover{
+    background-color: #fbeacf;
+}
+
+.cancel{
+    margin-left: 1%;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    box-shadow: 2px 2px 2px rgb(118, 114, 114);
+}
+
+.cancel:hover {
+    background-color: #abc9e8;
+}
+
+@media (max-width: 600px) {
+    .recipe-wrapper {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}

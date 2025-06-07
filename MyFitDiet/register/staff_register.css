@@ -1,0 +1,257 @@
+/* General Styles */
+.register-form {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    margin-left: 1%;
+}
+
+.container .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.container .title::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #9b59b6;
+    margin: 0 auto 10px auto;
+}
+
+.form-container {
+    display: flex;
+    gap: 40px; /* Increased gap between left and right sections */
+}
+
+.left-section,
+.right-section {
+    flex: 1; /* Each section takes equal width */
+}
+
+.user-details {
+    margin-bottom: 15px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-box input,
+.input-box select {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid,
+.input-box select:focus {
+    border-color: #9b59b6;
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.3);
+}
+
+.gender-details {
+    margin-bottom: 15px;
+}
+
+.gender-details .gender-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.gender-details .category {
+    display: flex;
+    gap: 10px;
+}
+
+.gender-details .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gender-details .category input[type="radio"] {
+    margin-right: 5px;
+}
+
+.button {
+    height: 40px;
+    margin: 20px 0;
+}
+
+.button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #9b59b6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background: #7d3c98;
+}
+
+.country select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.country select:hover {
+    border-color: #9b59b6;
+}
+
+.profile_pic {
+    margin-bottom: 15px;
+}
+
+.file-label {
+    display: inline-block;
+    background: #9b59b6;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-label:hover {
+    background: #7d3c98;
+}
+
+.profile_pic input[type="file"] {
+    display: none;
+}
+
+.file-name {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.checkbox label input {
+    margin-right: 3px;
+}
+
+.checkbox input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    transform: scale(0.8);
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.profile_pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.file-name {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    top: 80%;
+    text-align: center;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 58%;
+    right: 775px;
+    transform: translateY(-50%);
+    color: black;
+}
+
+/* 调整 gender 和 country 的下拉菜单样式 */
+.country select,
+.gender select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.country select:hover,
+.gender select:hover {
+    border-color: #9b59b6;
+}
+
+.user-details .input-box {
+    position: relative; /* 确保图标可以相对于输入框定位 */
+    margin-bottom: 15px;
+}
+
+.user-details .input-box .icon {
+    position: absolute;
+    left: 95%; /* 图标距离右侧的距离 */
+    top: 70%; /* 垂直居中 */
+    transform: translateY(-50%); /* 确保图标垂直居中 */
+    cursor: pointer;
+    color: #555; /* 图标颜色 */
+    font-size: 18px; /* 图标大小 */
+}

@@ -1,0 +1,483 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.community-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    
+}
+
+/* hot challenge */
+.challenges-sidebar {
+    width: 300px;
+    position: fixed;
+    right: 0;
+    background: #f4f4f4;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    height: 85vh; /* Full viewport height */
+    overflow: auto; /* Allows scrolling */
+    z-index: 1000;
+}
+
+/* Hide scrollbar (Chrome, Safari) */
+.challenges-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar (Firefox) */
+.challenges-sidebar {
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar (Edge, IE) */
+.challenges-sidebar {
+    -ms-overflow-style: none;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c2bfbf;
+    margin-bottom: 10px;
+}
+
+.challenge-card {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: transform 0.2s;
+}
+
+.challenge-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.challenge-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.challenge-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.challenge-stats {
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-btn {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 8px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* right side */
+.modules-sidebar {
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 15px;
+    background:  #f4f4f4;
+    border-left: 1px solid #eee;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* module */
+.module-card { 
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.module-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.module-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+.module-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.module-desc {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* post */
+.container {
+    flex: 1;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background: #007bff;
+    border-radius: 10px 10px 0 0;
+}
+
+.nav button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav button.active {
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* post css */
+.post-form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.post-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.file-upload {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.file-label:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.file-label i {
+    margin-right: 5px;
+}
+
+#file-input {
+    display: none;
+}
+
+.file-name {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.image-preview {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.post-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.post-form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.02);
+}
+
+#cancel-upload {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+#cancel-upload:hover {
+    background-color: #c0392b;
+}
+
+/* post */
+.post {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+/* post date and time */
+.post-date {
+    font-size: 0.8rem;
+    color: #777;
+    margin-left: 10px;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    max-width: 500px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.post-feed {
+    display: none;
+}
+
+.post-feed.active {
+    display: block;
+}
+
+/* like button */
+.like-section {
+    margin: 0;
+    margin-bottom: 20px;
+    /* display: flex; */
+}
+
+.like-btn {
+    /* flex: 1; */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+.like-btn.liked {
+    color: #ff0000; 
+}
+
+.like-btn:hover {
+    color: #ff0000; 
+}
+
+
+/* comemnt */
+.comment-section {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.comment-section form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comment-section form img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.comment-section form input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #f0f2f5;
+    outline: none;
+}
+
+.comment-section form button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.comment-date {
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+
+.comment-content {
+    flex: 1;
+}
+
+.comment img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.comment .text {
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+.show-comments {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.hidden-comments {
+    display: none;
+}
+
+
+/* 侧边栏隐藏动画 */
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
+}
+
+.modules-sidebar {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.challenges-sidebar {
+    transition: all 0.5s 0.1s cubic-bezier(0.4, 0, 0.2, 1); /* 延迟0.1s */
+}
+
+@media (max-width: 1190px) {
+    .modules-sidebar {
+        animation: slideOut 0.5s forwards;
+        pointer-events: none; /* 禁用交互 */
+    }
+    .container {
+        margin-left: 0; /* 补偿消失的宽度 */
+    }
+}
+
+@media (max-width: 920px) {
+    .challenges-sidebar {
+        animation: slideOut 0.5s forwards;
+        pointer-events: none;
+    }
+    .container {
+        margin-right: 0;
+    }
+}

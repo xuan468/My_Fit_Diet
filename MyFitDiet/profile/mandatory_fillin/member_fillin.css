@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px !important;
+    width: 90% !important; 
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 20px auto;
+    position: relative; /* Ensure it is not covered */
+    z-index: 10; /* Bring it forward */
+}
+
+.username span{
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+form {
+    width: 100%; /* Ensure the form takes the full width of the container */
+    max-width: 2000px; /* Limit the form width */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.other label:not(.checkboxes *) {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.other input:not(.checkboxes *), select:not(.checkboxes *) {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+.other input:focus, select:focus {
+    outline: none;
+    border-color: #57b846;
+    box-shadow: 0 0 5px rgba(87, 184, 70, 0.5);
+}  
+
+.upload-container button {
+    width: 100% !important; 
+    background: #57b846 !important; 
+    color: white !important; 
+    border: none !important; 
+    padding: 12px 20px !important; /* Add padding for better spacing */
+    font-size: 18px !important; 
+    font-weight: bold !important; 
+    border-radius: 8px !important; /* Rounded corners */
+    cursor: pointer !important; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease !important; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow for depth */
+}
+
+.upload-container button:hover {
+    background: #45a035; /* Darker green on hover */
+    transform: scale(1.02); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.upload-container button:active {
+    background: #3a8a2e; 
+    transform: scale(0.98); /* Slightly shrink button when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
+}
+
+
+/* checkboxes */
+.multiselect {
+    width: 100%;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.checkboxes {
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.checkboxes label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.checkboxes input {
+    margin-right: 10px;
+}
+
+
+
+

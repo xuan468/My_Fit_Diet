@@ -1,0 +1,600 @@
+body {
+    background-image: url('../images/background3.jpg');
+    background-size: cover; /* Adjusts image to fit screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+}
+
+.separate {
+    display: flex;
+    justify-content: center; /* Center child elements horizontally */
+    align-items: center; /* Align child elements vertically */
+    gap: 40px; /* Add spacing between child elements */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.username-follow {
+    background-color: #f0f0f0; 
+    border-radius: 12px; /* Rounded corners */
+    padding: 15px;
+    width: 1100px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+
+.gen-info {
+    background-color: #f0f0f0; 
+    border-radius: 12px; 
+    padding: 10px;
+    width: 300px; 
+    height: 650px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.others-info {
+    background-color: #f0f0f0; 
+    border-radius: 12px; /* Rounded corners */
+    padding: 10px;
+    width: 750px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    text-align: left;
+    margin-top: 20px;
+    margin-right: 60px;
+    height:650px;
+}
+
+.top-rectangle {
+    background-image: url('../images/background4.jpg');
+    background-size: cover; /* Adjusts image to fit screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px; 
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Profile */
+.main-profilepic {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background-color: #f8f8f8;
+    padding: 5px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+/* Profile Picture */
+.main-profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.username {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333; 
+    position: absolute;
+    z-index: 1;
+    margin-top: 130px;
+    margin-left: 300px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.follower {
+    font-size: 18px;
+    color: #333; 
+    position: absolute;
+    z-index: 1;
+    margin-top: 200px;
+    margin-left: 300px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.following {
+    font-size: 18px;
+    color: #333; 
+    position: absolute;
+    z-index: 1;
+    margin-top: 200px;
+    margin-left: 450px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* left */
+.About {
+    font-size: 40px;
+    color: #922323; 
+    position: relative;
+    z-index: 1;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top:20px;
+}
+
+.label {
+    font-size: 18px;
+    color: #551313; 
+    position: relative;
+    z-index: 1;
+    margin-left: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.data {
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* right */
+.others-info p{
+    font-size: 25px;
+    color: #922323; 
+    position: relative;
+    z-index: 1;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top:50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.info-item2 {
+    font-size: 18px;
+    color: #551313; 
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.info-item2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info-item2 .data {
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: medium;
+}
+
+/* Overlay for grey background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent grey background */
+    z-index: 999; 
+    display: none; /* Hidden by default */
+}
+
+body.modal-open {
+    pointer-events: none; /* Disable interactions with the page */
+}
+
+body.modal-open .navbar-container {
+    pointer-events: auto; /* Allow interactions with navigation bar */
+}
+
+body.modal-open .settings-form,
+body.modal-open .others-form {
+    pointer-events: auto; /* Allow interactions with the modal */
+}
+
+/* Form 1 */
+.settings-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Close button (X) styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* setting 1 button */
+.settings-btn {
+    background: rgb(67, 67, 67);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D depth */
+    font-size: 17px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px 40px;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    color: rgb(239, 234, 234);
+    font-family: 'monaca';
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.settings-btn:hover {
+    transform: scale(1.05); /* Scale the whole button */
+}
+
+
+/* setting 2 button */
+
+.settings-btn2 {
+    background: rgb(67, 67, 67);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D depth */
+    font-size: 17px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px 40px;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    color: rgb(239, 234, 234);
+    font-family:'monaca';
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.settings-btn2:hover {
+    transform: scale(1.05); /* Scale the whole button */
+}
+
+/* Profile Picture Container in form */
+.profilepic-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background-color: #f8f8f8;
+    padding: 5px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Profile Picture in form*/
+.profile_pic {
+    width: 100;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Camera icon styling */
+.camera-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.camera-icon:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Hide the file input */
+.file-input {
+    display: none;
+}
+
+/* Upload Form */
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    margin-top: 10px;
+    position: relative; /* Set relative positioning */
+}
+
+/* Upload Button */
+.upload-container button {
+    padding: 7px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #bd9663;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: relative; /* Set absolute positioning */
+    bottom: 5px; 
+    right: 10px; 
+}
+
+.upload-container button:hover {
+    background-color: #8b5a31;
+}
+
+.upload-container button:hover {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+/* setting 1 */
+
+.bottom-info {
+    display: flex;
+    justify-content: space-between; /* Creates space between the two sections */
+    align-items: flex-start; /* Aligns content at the top */
+    padding: 20px;
+    gap: 40px; /* Adds space between .info and .info2 */
+}
+
+.info, .info2 {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: left;
+}
+
+.info p , .info2 p {
+    display: flex;
+    justify-content: space-between; /* Ensures label and input are spaced */
+    align-items: center; /* Aligns label and input vertically */
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.info p input, .info2 p input{
+    width: 60%;
+}
+
+.info p  select {
+    width: 63%;
+    height: 20px;
+}
+
+/* Clearfix to prevent layout issues */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Form 2 */
+.others-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Close button (X) styling */
+.others-form .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+.others-form .close-btn:hover {
+    color: red;
+}
+
+/* Form 2 sections */
+.others-form .other {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Form 2 labels and inputs */
+.others-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.others-form input[type="text"], .others-form input[type="number"], .others-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Form 2 buttons */
+.others-form .upload-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.others-form .upload-container button {
+    background-color: #bd9663;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.others-form .upload-container button:hover {
+    background-color: #8b5a31;
+}
+
+
+/* checkboxes */
+.multiselect {
+    width: 100%;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.checkboxes {
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.checkboxes label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.checkboxes input {
+    margin-right: 10px;
+}
+
+
+/* For medium screens (tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .username-follow {
+        width: 85%;
+        left:45px;
+    }
+
+    .gen-info {
+        width: 45%; 
+        height: 850px; 
+        left:45px;
+    }
+
+    .others-info {
+        width: 45%; 
+        height: 850px; 
+        left:45px;
+    }
+
+    .main-profilepic {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .info-item, .info-item2 {
+        display: flex;
+        justify-content: space-between; 
+        margin-bottom: 10px; 
+        margin-top: 3px; 
+        gap: 20px; 
+    }
+    
+    .info-item .data, .info-item2 .data {
+        flex-grow: 1; 
+        text-align: right; 
+        margin-right: 40px; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+        font-size: medium;
+    }
+
+    .upload-container button {
+        position: static; 
+        margin-top: 10px;
+    }
+}

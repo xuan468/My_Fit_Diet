@@ -1,0 +1,232 @@
+body {
+    background-image: url('../images/background3.jpg');
+    background-size: cover; /* Adjusts image to fit the screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.separate {
+    display: flex;
+    justify-content: center; /* Center child elements horizontally */
+    align-items: center; /* Align child elements vertically */
+    gap: 40px; /* Add spacing between child elements */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.username-follow {
+    background-color: #f0f0f0; 
+    border-radius: 12px; 
+    padding: 15px;
+    width: 1100px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.gen-info {
+    background-color: #f0f0f0; 
+    border-radius: 12px; 
+    padding: 10px;
+    width: 300px; 
+    height: 650px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.others-info {
+    background-color: #f0f0f0; 
+    border-radius: 12px; 
+    padding: 10px;
+    width: 750px; 
+    height: 650px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: relative;
+    text-align: left;
+    margin-top: 20px;
+    margin-right: 60px;
+}
+
+.top-rectangle {
+    background-image: url('../images/background4.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px; 
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Profile */
+.main-profilepic {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background-color: #f8f8f8;
+    padding: 5px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+/* Profile Picture */
+.main-profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.username {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333; 
+    position: absolute;
+    z-index: 1;
+    margin-top: 130px;
+    margin-left: 300px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.follower {
+    font-size: 18px;
+    color: #333; 
+    position: absolute;
+    z-index: 1;
+    margin-top: 200px;
+    margin-left: 300px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.following {
+    font-size: 18px;
+    color: #333; 
+    position: absolute;
+    z-index: 1;
+    margin-top: 200px;
+    margin-left: 450px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* left */
+.About {
+    font-size: 25px;
+    color: #922323; 
+    position: relative;
+    z-index: 1;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top:20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.label {
+    font-size: 18px;
+    color: #551313; 
+    position: relative;
+    z-index: 1;
+    margin-left: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.data {
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* right */
+.others-info p{
+    font-size: 25px;
+    color: #922323; 
+    position: relative;
+    z-index: 1;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top:30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.info-item2 {
+    font-size: 18px;
+    color: #551313; /* Dark text for readability */
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.info-item2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info-item2 .data {
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: medium;
+}
+
+/* follow/unfollow */
+.follow-btn {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: black;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D depth */
+    font-size: 17px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px 40px;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-family:'monaca';
+    margin-top: 140px;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.follow-btn:hover {
+    transform: scale(1.05);
+}
+
+.unfollow-btn {
+    background: rgba(91, 91, 91, 0.3); 
+    color: rgb(0, 0, 0); 
+    border: none;
+}

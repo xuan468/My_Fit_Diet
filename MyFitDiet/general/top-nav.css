@@ -1,0 +1,148 @@
+body{
+    padding-top: 87px !important;
+}
+
+/* 只影响导航栏，避免影响整个页面 */
+.navbar-container * {   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* 只作用于 .navbar-container 内部，避免覆盖全局 body */
+.navbar-container {
+    width: 100%;
+    position: fixed; /* Sticks to the top */
+    top: 0;
+    left: 0;
+    background-color: white; /* Adjust color as needed */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 2000;
+}
+
+/* Navbar 样式 */
+.navbar-container .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    width: 70px; /* Adjust the width to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Align it inline with other elements */
+    margin: 0; /* Remove any default margin */
+    margin-right: auto;
+}
+
+/* 导航链接 */
+.navbar-container .nav-links {
+    display: flex;
+    justify-content: center; /* Center the links */
+    align-items: center;
+    gap: 30px; /* Space between links */
+    flex: 1; /* Allow the nav-links to take up available space */
+}
+
+.navbar-container .nav-links a, 
+.navbar-container .dropdown > a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    position: relative;
+}
+
+
+/* hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Distance from text */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Adjust to match theme */
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Ensure profile-container links are not affected */
+.navbar-container .profile-container a:hover::after {
+    content: none; /* Disable hover underline for profile links */
+}
+
+/* Disable hover underline for the "Review" dropdown */
+.navbar-container .dropdown-menu a:hover::after {
+    content: none; /* Disable the hover underline */
+}
+
+
+/* Active 链接样式 */
+.navbar-container .nav-links a.active {
+    font-weight: bold;
+}
+
+.navbar-container .nav-links a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* Dropdown 菜单 */
+.navbar-container .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-container .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 90px;
+    z-index: 100;
+    margin-top: 30px;
+}
+
+.navbar-container .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.navbar-container .dropdown-menu a:hover {
+    background: #b1b1b1;
+}
+
+/* Profile 样式 */
+.navbar-container .profile-container {
+    margin-left: auto; /* Push the profile container to the right */
+}
+
+.navbar-container .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}

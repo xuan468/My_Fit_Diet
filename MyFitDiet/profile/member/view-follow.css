@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#showFollower  {
+    background: none;
+    border-color: black;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D depth */
+    font-size: 17px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px 40px;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-family: 'monaca';
+    margin-top: 110px;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    z-index: 1000;
+}
+
+#showFollower:hover {
+    transform: scale(1.05);
+}
+
+#showFollowing {
+    background: none;
+    border-color: black;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D depth */
+    font-size: 17px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px 40px;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-family:'monaca';
+    margin-top: 60px;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    z-index: 1000;
+}
+
+#showFollowing:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    position: fixed;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.username-gender {
+    display: flex;
+    align-items: center;
+}
+
+.following-username {
+    font-size: 20px;
+    font-weight: normal;
+    margin-right: 10px; /* Add some space between username and gender */
+}
+
+.gender-icon {
+    justify-content: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-bottom: 4px;
+}
+
+.age-country {
+    display: flex;
+    align-items: center;
+}
+
+.gender, .age, .country {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.view-btn, .follow-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+    width: 80px;
+    height: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 15px; /* Ensures vertical centering for <a> elements */
+    font-size: 14px;
+}
+
+.view-btn:hover, .follow-btn:hover {
+    background-color: #0056b3;
+}
+
+.unfollow-btn {
+    background-color: #4f4f4f !important;
+}
+.unfollow-btn:hover {
+    background-color: #5c5c5c !important;
+}

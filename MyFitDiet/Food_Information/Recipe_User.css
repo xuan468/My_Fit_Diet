@@ -1,0 +1,267 @@
+body{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffe0;
+}
+
+.head{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../images/recipebg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.head::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #ffffe0);
+}
+
+.show{
+    min-width: 150px;
+    min-height: 45px;
+    margin: 15px;
+    color: white;
+    background-color: rgb(37, 197, 50);
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 20px 0 20px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+}
+
+.show:hover {
+    background-color: rgb(30, 150, 40);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.filter-dropdown {
+    position: relative;
+}
+
+.filter {
+    padding: 8px 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.filter-list-content {
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: -45%;
+    width: 150px;
+    background: white;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 10;
+}
+
+.filter-list-content ul {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.filter-list-content ul li {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.filter-list-content ul li:hover {
+    background-color: #f1f1f1;
+}
+
+.filter-list-content a {
+    color: black;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #fff;
+    width: 350px;
+}
+
+.search{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.searchfield{
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 8px;
+    flex: 1;
+    font-size: 16px;
+}
+
+.back{
+    left: 0;
+    margin-left: 20px;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 20px;
+    padding: 1% 1%;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(118, 114, 114);
+}
+
+.back:hover{
+    color: rgb(175, 92, 219);
+}
+
+a{
+    text-decoration: none;
+}
+
+.recommendation{
+    text-align: center;
+    width: 96%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.recipe-wrapper:nth-of-type(-n+4){
+    display: flex;
+}
+
+.recipe-wrapper{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 50%;
+    max-width: 500px;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.img{
+    height: 100px;
+    width: 150px;
+    margin-left: 28px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.content{
+    display: flex;
+    background: linear-gradient(to bottom, rgb(255, 255, 220), rgb(255, 250, 181));
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    height: 150px;
+    text-align: left;
+    border-radius: 10px;
+    border: 2px solid rgb(228, 228, 228);
+    padding: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0.5, 0.4);
+    transition: transform 0.2s ease-in-out;
+}
+
+.title{
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+.title2{
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 30px;
+    color: rgb(45, 117, 23);
+}
+
+.content:hover {
+    transform: scale(1.02);
+}
+
+.text-container {
+    width: 100%;
+    flex: 1; 
+}
+
+.label, .label1, .label2{
+    border: none;
+    text-align: center;
+    background: none;
+    max-width: 800px;
+    min-width: 275px;
+    font-size: 1rem;
+    color: #333;
+    font-family: "Playfair Display", serif;
+}
+
+.label1{
+    font-weight: bold;
+    font-size: 1rem;
+    color: #222;
+}
+
+@media (max-width: 600px) {
+    .recipe-wrapper {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}

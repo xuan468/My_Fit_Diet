@@ -1,0 +1,217 @@
+body{
+    background-image: url(../images/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+form{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mainbody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 5% auto;
+}
+
+.back{
+    left: 2%;
+    top: 10%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid rgb(53, 53, 53);
+    border-radius: 20px;
+    padding: 1% 1%;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(118, 114, 114);
+    transition: all 0.3s ease-in-out;
+}
+
+.back:hover {
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+
+.contents{
+    margin-left: 4%;
+    margin-top: 8%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    width: 90%;
+    max-width: 1500px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 50px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.name input{
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+    word-wrap: break-word;
+    max-width: 80%;
+    margin-bottom: 30px;
+}
+
+.difficulty label{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.difficulty{
+    margin-top: -1%;
+    margin-bottom: 3%;
+}
+
+.description{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    padding: 2%;
+    border: 2px solid grey;
+    border-radius: 0px 20px 0 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.indtruction{
+    text-align:left;
+}
+
+.short-des{
+    font-family: "Playfair Display", serif;
+    width: 100%;
+    font-size: 1.1rem;
+    border: white;
+    resize: vertical;
+}
+
+.stars {
+    color: gold;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.video{
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 15%;
+}
+
+.video iframe{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    height: 50vh;
+}
+
+.newURL{
+    top: 105%;
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+}
+
+.instruction{
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.Button {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.edit1, .cancel {
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    min-width: 120px;
+    text-align: center;
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 2px rgba(118, 114, 114, 0.3);
+}
+
+.edit1 {
+    background-color: #03661a;
+    color: white;
+}
+
+.edit1:hover {
+    background-color: #fbeacf;
+    color: #333;
+    transform: translateY(-2px);
+}
+
+.cancel {
+    background: white;
+}
+
+.cancel:hover {
+    background-color: #abc9e8;
+    transform: translateY(-2px);
+}
+
+.label{
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.label label{
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: 0.3s;
+}
+
+input:focus{
+    border-color: #28a745;
+    outline: none;
+    background-color: #f9f9f9;
+}
